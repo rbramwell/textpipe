@@ -5,7 +5,7 @@ Obtain elements from a textpipe doc, by specifying a pipeline, in a dictionary.
 from textpipe.doc import Doc
 
 
-class Pipeline:
+class Pipeline(list):
     """
     Create a pipeline instance based on the elements you would want from your text
 
@@ -22,6 +22,7 @@ class Pipeline:
         language: 2-letter code for the language of the text
         hint_language: language you expect your text to be
         """
+        super(Pipeline, self).__init__()
         self.pipeline = pipeline
         self.language = language
         self.hint_language = hint_language

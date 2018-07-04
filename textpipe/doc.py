@@ -10,7 +10,7 @@ import textacy
 import textacy.text_utils
 
 
-class Doc:
+class Doc(object):
     """
     Create a doc instance of text, obtain cleaned, readable text and
     metadata from this doc.
