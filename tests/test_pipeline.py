@@ -5,7 +5,12 @@ Testing for textpipe pipeline.py
 from textpipe.pipeline import Pipeline
 
 TEXT = 'Test sentence for testing'
-PIPELINE = ['raw', 'nwords', 'complexity', 'clean_text']
+PARAMS_DUMMY = {'foo':'bar', 'bar':'foo'}
+PARAMS_CLEAN_TEXT = {'clean_html':True}
+PIPELINE = [('raw', PARAMS_DUMMY),
+            ('nwords', PARAMS_DUMMY),
+            ('complexity', PARAMS_DUMMY),
+            ('clean_text', PARAMS_CLEAN_TEXT)]
 PIPE = Pipeline(PIPELINE)
 
 
